@@ -1,14 +1,10 @@
-import {
-  ListFilter,
-  LogOut,
-  MessageSquareDiff,
-  Search,
-  User,
-} from 'lucide-react';
+import { ListFilter, LogOut, MessageSquareDiff, Search } from 'lucide-react';
 import { Input } from '../ui/input';
 import ThemeSwitch from './theme-switch';
 import { conversations } from '@/dummy-data/db';
-import Conversation from './conversation';
+
+// import Conversation from './conversation';
+import { UserButton } from '@clerk/nextjs';
 
 const LeftPanel = () => {
   return (
@@ -16,13 +12,13 @@ const LeftPanel = () => {
       <div className="sticky top-0 bg-left-panel z-10">
         {/* Header */}
         <div className="flex justify-between bg-gray-primary p-3 items-center">
-          <User size={24} />
+          <UserButton />
 
           <div className="flex items-center gap-3">
             <MessageSquareDiff size={20} />{' '}
             {/* TODO: This line will be replaced with <UserListDialog /> */}
             <ThemeSwitch />
-            <LogOut size={20} className="cursor-pointer" />
+            
           </div>
         </div>
         <div className="p-3 flex items-center">
@@ -45,11 +41,11 @@ const LeftPanel = () => {
       {/* Chat List */}
       <div className="my-3 flex flex-col gap-0 max-h-[80%] overflow-auto">
         {/* Conversations will go here*/}
-        {conversations.map((conversation) => {
+        {/* {conversations.map((conversation) => {
           return (
             <Conversation key={conversation._id} conversation={conversation} />
           );
-        })}
+        })} */}
         {conversations?.length === 0 && (
           <>
             <p className="text-center text-gray-500 text-sm mt-3">
