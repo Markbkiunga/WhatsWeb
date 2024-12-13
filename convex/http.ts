@@ -25,7 +25,7 @@ http.route({
       switch (result.type) {
         case 'user.created':
           await ctx.runMutation(internal.users.createUser, {
-            tokenIdentifier: `${process.env.CLERK_APP_DOMAIN}|${result.data.id}`,
+            tokenIdentifier: `https://${process.env.CLERK_APP_DOMAIN}|${result.data.id}`,
             email: result.data.email_addresses[0]?.email_address,
             name: `${result.data.first_name ?? 'Guest'} ${result.data.last_name ?? ''}`,
             image: result.data.image_url,
@@ -33,26 +33,18 @@ http.route({
           break;
         case 'user.updated':
           await ctx.runMutation(internal.users.updateUser, {
-            tokenIdentifier: `${process.env.CLERK_APP_DOMAIN}|${result.data.id}`,
+            tokenIdentifier: `https://${process.env.CLERK_APP_DOMAIN}|${result.data.id}`,
             image: result.data.image_url,
           });
           break;
         case 'session.created':
-          console.log(
-            'Token Identifier:',
-            `${process.env.CLERK_APP_DOMAIN}|${result.data.user_id}`
-          );
           await ctx.runMutation(internal.users.setUserOnline, {
-            tokenIdentifier: `${process.env.CLERK_APP_DOMAIN}|${result.data.user_id}`,
+            tokenIdentifier: `https://${process.env.CLERK_APP_DOMAIN}|${result.data.user_id}`,
           });
           break;
         case 'session.ended':
-          console.log(
-            'Token Identifier:',
-            `${process.env.CLERK_APP_DOMAIN}|${result.data.user_id}`
-          );
           await ctx.runMutation(internal.users.setUserOffline, {
-            tokenIdentifier: `${process.env.CLERK_APP_DOMAIN}|${result.data.user_id}`,
+            tokenIdentifier: `https://${process.env.CLERK_APP_DOMAIN}|${result.data.user_id}`,
           });
           break;
       }
