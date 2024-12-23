@@ -19,6 +19,7 @@ import { useMutation, useQuery } from 'convex/react';
 import { api } from '../../../convex/_generated/api';
 import toast from 'react-hot-toast';
 import { useConversationStore } from '@/store/chat-store';
+import { Id } from '../../../convex/_generated/dataModel';
 
 const UserListDialog = () => {
   const [selectedUsers, setSelectedUsers] = useState<Id<'users'>[]>([]);
@@ -27,7 +28,7 @@ const UserListDialog = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [renderedImage, setRenderedImage] = useState('');
   const imgRef = useRef<HTMLInputElement>(null);
-  const dialogCloseRef = useRef<HTMLInputElement>(null);
+  const dialogCloseRef = useRef<HTMLButtonElement>(null);
   const createConversation = useMutation(api.conversations.createConversation);
   const me = useQuery(api.users.getMe);
   const users = useQuery(api.users.getUsers);
@@ -42,7 +43,7 @@ const UserListDialog = () => {
       let conversationId;
       if (!isGroup) {
         conversationId = await createConversation({
-          participants: [...selectedUsers, me?._id],
+          participants: [...selectedUsers, me?._id!],
           isGroup: false,
         });
       } else {
