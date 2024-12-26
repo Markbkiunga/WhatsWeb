@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'WhatsWeb',
+  // title: 'WhatsWeb',
   description: 'Discover a New Way to Connect with WhatsWeb',
 };
 
@@ -30,6 +30,15 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link
+            rel="icon"
+            href="/favicon.ico"
+            type="image/x-icon"
+            sizes="any"
+          />
+          <title>WhatsWeb</title>
+        </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
