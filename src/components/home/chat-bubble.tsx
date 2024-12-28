@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogDescription } from '../ui/dialog';
 import ReactPlayer from 'react-player';
-import { render } from 'react-dom';
+// import { render } from 'react-dom';
 import { defineApp } from 'convex/server';
 import ChatAvatarActions from './chat-avatar-actions';
 
