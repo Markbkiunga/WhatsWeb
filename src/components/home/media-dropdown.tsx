@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
-import { ImageIcon, Plus, Video } from 'lucide-react';
+import { ImageIcon, Paperclip, Video } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription } from '../ui/dialog';
 import { Button } from '../ui/button';
 import Image from 'next/image';
@@ -123,7 +123,7 @@ const MediaDropdown = () => {
 
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <Plus className="text-gray-600 dark:text-gray-400" />
+          <Paperclip className="text-gray-600 dark:text-gray-400" />
         </DropdownMenuTrigger>
 
         <DropdownMenuContent>
