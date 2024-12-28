@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { ConvexClientProvider } from '@/providers/convex-client-provider';
 import { ClerkProvider } from '@clerk/nextjs';
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from '@vercel/analytics/react';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -50,6 +51,7 @@ export default function RootLayout({
           >
             <ConvexClientProvider>
               {children}
+              <Analytics />
               <Toaster />
             </ConvexClientProvider>
           </ThemeProvider>
