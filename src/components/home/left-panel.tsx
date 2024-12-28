@@ -44,9 +44,9 @@ const LeftPanel = () => {
             <ThemeSwitch />
           </div>
         </div>
-        <div className="p-3 flex items-center">
-          {/* Search */}
-          <div className="relative h-10 mx-3 flex-1">
+        {/* <div className="p-3 flex items-center"> */}
+        {/* Search and FIlter to be worked on!!!*/}
+        {/* <div className="relative h-10 mx-3 flex-1">
             <Search
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10"
               size={18}
@@ -58,7 +58,7 @@ const LeftPanel = () => {
             />
           </div>
           <ListFilter className="cursor-pointer" />
-        </div>
+        </div> */}
       </div>
 
       {/* Chat List */}
