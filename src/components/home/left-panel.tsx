@@ -33,7 +33,7 @@ const LeftPanel = () => {
 
   if (isLoading) return null;
   return (
-    <div className="w-1/4 border-gray-600 border-r">
+    <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto">
       <div className="sticky top-0 bg-left-panel z-10">
         {/* Header */}
         <div className="flex justify-between bg-gray-primary p-3 items-center">
