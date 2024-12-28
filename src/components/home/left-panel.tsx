@@ -75,8 +75,8 @@ const LeftPanel = () => {
               No conversations yet
             </p>
             <p className="text-center text-gray-500 text-sm mt-3 ">
-              We understand {"you're"} an introvert, but {"you've"} got to start
-              somewhere 😊
+              Wow, no friends yet?🫢. Go ahead and start a conversation using
+              the new chat button above.
             </p>
           </>
         )}
