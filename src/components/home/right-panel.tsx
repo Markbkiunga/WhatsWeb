@@ -15,7 +15,7 @@ const RightPanel = () => {
 
   if (isLoading) {
     return (
-      <div className="w-3/4 bg-gray-secondary flex flex-col items-center justify-center py-10 overflow-auto resize-x">
+      <div className="w-3/4 bg-gray-secondary flex flex-col items-center justify-center py-10">
         <div className="flex flex-col items-center w-full justify-center py-10 gap-4">
           <div className="w-[320px] h-[188px] bg-gray-tertiary rounded animate-pulse" />
           <div className="h-9 w-96 bg-gray-tertiary rounded animate-pulse mt-5 mb-2" />
@@ -34,7 +34,7 @@ const RightPanel = () => {
     selectedConversation.image || selectedConversation.groupImage;
 
   return (
-    <div className="w-3/4 flex flex-col overflow-auto resize-x">
+    <div className="w-3/4 flex flex-col ">
       <div className="w-full sticky top-0 z-50">
         {/* Header */}
         <div className="flex justify-between bg-gray-primary p-3">

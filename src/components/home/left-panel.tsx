@@ -45,7 +45,7 @@ const LeftPanel = () => {
         </div>
 
         <div className="my-3 flex flex-col gap-2 p-3">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <div key={i} className="flex items-center gap-3 p-2">
               <div className="w-12 h-12 rounded-full bg-gray-tertiary" />
               <div className="flex-1">
