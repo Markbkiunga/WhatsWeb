@@ -37,7 +37,7 @@ const Conversation = ({ conversation }: { conversation: any }) => {
             <div className="animate-pulse bg-gray-tertiary w-full h-full rounded-full"></div>
           </AvatarFallback>
         </Avatar>
-        <div className="w-full max-[425px]:hidden">
+        <div className="w-full max-[450px]:hidden">
           <div className="flex items-center">
             <h3 className="text-sm font-medium">{conversationName}</h3>
             <span className="text-xs text-gray-500 ml-auto">

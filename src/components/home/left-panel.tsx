@@ -35,9 +35,9 @@ const LeftPanel = () => {
     return (
       <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto animate-pulse">
         <div className="sticky top-0 bg-left-panel z-10">
-          <div className="flex justify-between bg-gray-primary p-3 items-center">
-            <div className="w-8 h-8 rounded-full bg-gray-tertiary" />
-            <div className="flex items-center gap-3">
+          <div className="flex justify-between bg-gray-primary p-3 items-center ">
+            <div className="w-8 max-[450px]:hidden h-8 rounded-full bg-gray-tertiary" />
+            <div className="flex flex-wrap items-center gap-3">
               <div className="w-8 h-8 rounded bg-gray-tertiary" />
               <div className="w-8 h-8 rounded bg-gray-tertiary" />
             </div>
@@ -48,7 +48,7 @@ const LeftPanel = () => {
           {[...Array(5)].map((_, i) => (
             <div key={i} className="flex items-center gap-3 p-2">
               <div className="w-12 h-12 rounded-full bg-gray-tertiary" />
-              <div className="flex-1">
+              <div className="max-[450px]:hidden  flex-1">
                 <div className="h-4 w-24 bg-gray-tertiary rounded mb-2" />
                 <div className="h-3 w-32 bg-gray-tertiary rounded" />
               </div>
@@ -59,13 +59,13 @@ const LeftPanel = () => {
     );
   }
   return (
-    <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto max-[425px]:resize-none">
+    <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto max-[450px]:resize-none">
       <div className="sticky top-0 bg-left-panel z-10">
         {/* Header */}
-        <div className="flex flex-wrap justify-between bg-gray-primary p-3 items-center max-[425px]:flex-col gap-3">
+        <div className="flex flex-wrap justify-between bg-gray-primary p-3 items-center max-[450px]:flex-col gap-3">
           <UserButton />
 
-          <div className="flex flex-wrap justify-center items-center gap-3 max-[425px]:flex-col">
+          <div className="flex flex-wrap justify-center items-center gap-3 max-[450px]:flex-col">
             {isAuthenticated && <UserListDialog />}
             <ThemeSwitch />
           </div>

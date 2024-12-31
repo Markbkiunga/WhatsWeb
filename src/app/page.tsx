@@ -11,7 +11,7 @@ export default function Home() {
         <LeftPanel />
         <RightPanel />
       </div>
-      {/* <div className="min-[425px]:hidden">
+      {/* <div className="min-[450px]:hidden">
         <NotReadyForMobile />
       </div> */}
     </main>

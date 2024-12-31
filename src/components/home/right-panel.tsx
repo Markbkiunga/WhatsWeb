@@ -15,13 +15,13 @@ const RightPanel = () => {
 
   if (isLoading) {
     return (
-      <div className="w-3/4 bg-gray-secondary flex flex-col items-center justify-center py-10">
+      <div className="w-full sm:w-3/4 bg-gray-secondary flex flex-col items-center justify-center py-10">
         <div className="flex flex-col items-center w-full justify-center py-10 gap-4">
-          <div className="w-[320px] h-[188px] bg-gray-tertiary rounded animate-pulse" />
-          <div className="h-9 w-96 bg-gray-tertiary rounded animate-pulse mt-5 mb-2" />
-          <div className="w-1/2 h-12 bg-gray-tertiary rounded animate-pulse" />
+          <div className="w-[80%] sm:w-[320px] h-[188px] bg-gray-tertiary rounded animate-pulse" />
+          <div className="h-9 w-[90%] sm:w-96 bg-gray-tertiary rounded animate-pulse mt-5 mb-2" />
+          <div className="w-[80%] sm:w-1/2 h-12 bg-gray-tertiary rounded animate-pulse" />
         </div>
-        <div className="w-1/2 h-4 mt-auto bg-gray-tertiary rounded animate-pulse" />
+        <div className="w-[80%] sm:w-1/2 h-4 mt-auto bg-gray-tertiary rounded animate-pulse" />
       </div>
     );
   }
