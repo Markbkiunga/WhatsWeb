@@ -31,7 +31,33 @@ const LeftPanel = () => {
     }
   }, [conversations, selectedConversation, setSelectedConversation]);
 
-  if (isLoading) return null;
+  if (isLoading) {
+    return (
+      <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto animate-pulse">
+        <div className="sticky top-0 bg-left-panel z-10">
+          <div className="flex justify-between bg-gray-primary p-3 items-center">
+            <div className="w-8 h-8 rounded-full bg-gray-tertiary" />
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded bg-gray-tertiary" />
+              <div className="w-8 h-8 rounded bg-gray-tertiary" />
+            </div>
+          </div>
+        </div>
+
+        <div className="my-3 flex flex-col gap-2 p-3">
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className="flex items-center gap-3 p-2">
+              <div className="w-12 h-12 rounded-full bg-gray-tertiary" />
+              <div className="flex-1">
+                <div className="h-4 w-24 bg-gray-tertiary rounded mb-2" />
+                <div className="h-3 w-32 bg-gray-tertiary rounded" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto">
       <div className="sticky top-0 bg-left-panel z-10">
