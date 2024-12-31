@@ -59,13 +59,13 @@ const LeftPanel = () => {
     );
   }
   return (
-    <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto">
+    <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto max-[425px]:resize-none">
       <div className="sticky top-0 bg-left-panel z-10">
         {/* Header */}
-        <div className="flex justify-between bg-gray-primary p-3 items-center max-[425px]:flex-col gap-3">
+        <div className="flex flex-wrap justify-between bg-gray-primary p-3 items-center max-[425px]:flex-col gap-3">
           <UserButton />
 
-          <div className="flex items-center gap-3 max-[425px]:flex-col">
+          <div className="flex flex-wrap justify-center items-center gap-3 max-[425px]:flex-col">
             {isAuthenticated && <UserListDialog />}
             <ThemeSwitch />
           </div>
@@ -88,7 +88,7 @@ const LeftPanel = () => {
       </div>
 
       {/* Chat List */}
-      <div className="my-3 flex flex-col gap-0 max-h-[80%] overflow-auto">
+      <div className="my-3 flex flex-col gap-0 max-h-[80%] overflow-hidden">
         {/* Conversations will go here*/}
         {conversations?.map((conversation) => {
           return (
