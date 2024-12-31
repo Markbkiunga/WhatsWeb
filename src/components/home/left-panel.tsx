@@ -31,15 +31,41 @@ const LeftPanel = () => {
     }
   }, [conversations, selectedConversation, setSelectedConversation]);
 
-  if (isLoading) return null;
+  if (isLoading) {
+    return (
+      <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto animate-pulse">
+        <div className="sticky top-0 bg-left-panel z-10">
+          <div className="flex justify-between bg-gray-primary p-3 items-center ">
+            <div className="w-8 max-[450px]:hidden h-8 rounded-full bg-gray-tertiary" />
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="w-8 h-8 rounded bg-gray-tertiary" />
+              <div className="w-8 h-8 rounded bg-gray-tertiary" />
+            </div>
+          </div>
+        </div>
+
+        <div className="my-3 flex flex-col gap-2 p-3">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="flex items-center gap-3 p-2">
+              <div className="w-12 h-12 rounded-full bg-gray-tertiary" />
+              <div className="max-[450px]:hidden  flex-1">
+                <div className="h-4 w-24 bg-gray-tertiary rounded mb-2" />
+                <div className="h-3 w-32 bg-gray-tertiary rounded" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
   return (
-    <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto">
+    <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto max-[450px]:resize-none">
       <div className="sticky top-0 bg-left-panel z-10">
         {/* Header */}
-        <div className="flex justify-between bg-gray-primary p-3 items-center">
+        <div className="flex flex-wrap justify-between bg-gray-primary p-3 items-center max-[450px]:flex-col gap-3">
           <UserButton />
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap justify-center items-center gap-3 max-[450px]:flex-col">
             {isAuthenticated && <UserListDialog />}
             <ThemeSwitch />
           </div>
@@ -62,7 +88,7 @@ const LeftPanel = () => {
       </div>
 
       {/* Chat List */}
-      <div className="my-3 flex flex-col gap-0 max-h-[80%] overflow-auto">
+      <div className="my-3 flex flex-col gap-0 max-h-[80%] overflow-hidden">
         {/* Conversations will go here*/}
         {conversations?.map((conversation) => {
           return (
