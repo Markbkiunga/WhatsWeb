@@ -62,10 +62,10 @@ const LeftPanel = () => {
     <div className="w-1/4 border-gray-600 border-r resize-x overflow-auto">
       <div className="sticky top-0 bg-left-panel z-10">
         {/* Header */}
-        <div className="flex justify-between bg-gray-primary p-3 items-center">
+        <div className="flex justify-between bg-gray-primary p-3 items-center max-[425px]:flex-col gap-3">
           <UserButton />
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 max-[425px]:flex-col">
             {isAuthenticated && <UserListDialog />}
             <ThemeSwitch />
           </div>
