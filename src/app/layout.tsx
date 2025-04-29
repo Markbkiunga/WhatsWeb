@@ -19,25 +19,60 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  // title: 'WhatsWeb',
+  title: 'WhatsWeb',
   description: 'Discover a New Way to Connect with WhatsWeb',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
       <html lang="en">
         <head>
+          {/* Favicons */}
+          <link rel="icon" href="/favicon.ico" sizes="any" />
           <link
             rel="icon"
-            href="/favicon.ico"
-            type="image/x-icon"
-            sizes="any"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
           />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+
+          {/* Apple Touch */}
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+
+          {/* Android Chrome */}
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/android-chrome-192x192.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/android-chrome-512x512.png"
+          />
+
+          {/* Manifest */}
+          <link rel="manifest" href="/site.webmanifest" />
+
+          {/* Windows Meta */}
+          <meta name="msapplication-TileColor" content="#25D366" />
+          <meta name="theme-color" content="#25D366" />
+
           <title>WhatsWeb</title>
         </head>
         <body
