@@ -18,7 +18,7 @@ const ChatPlaceHolder = () => {
       <p className="w-1/2 mt-auto text-center text-base text-muted-foreground flex items-center justify-center gap-1">
         Crafted by
         <a
-          href="https://www.markbriankiungakamau.co.ke/"
+          href="https://linktr.ee/markbkiunga"
           target="_blank"
           rel="noopener noreferrer"
           className="text-green-500 font-semibold hover:underline transition-colors duration-200"
