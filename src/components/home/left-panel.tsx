@@ -88,7 +88,8 @@ const LeftPanel = () => {
       </div>
 
       {/* Chat List */}
-      <div className="my-3 flex flex-col gap-0 max-h-[80%] overflow-hidden">
+      <div className="my-3 flex flex-col gap-0 overflow-y-auto max-h-[calc(100vh-120px)] min-h-0 px-1 scroll-smooth scrollbar-thin scrollbar-thumb-gray-500 max-[450px]:max-h-screen">
+        {' '}
         {/* Conversations will go here*/}
         {conversations?.map((conversation) => {
           return (

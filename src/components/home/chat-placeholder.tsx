@@ -15,8 +15,8 @@ const ChatPlaceHolder = () => {
           offers everything you need to chat, call, and share like never before.
         </p>
       </div>
-      <p className="w-1/2 mt-auto text-center text-base text-muted-foreground flex items-center justify-center gap-1">
-        Crafted by
+      <p className="lg:w-1/2 mt-auto text-center text-base text-muted-foreground flex items-center justify-center gap-1">
+        Adapted by
         <a
           href="https://linktr.ee/markbkiunga"
           target="_blank"
